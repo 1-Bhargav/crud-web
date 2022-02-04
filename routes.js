@@ -61,7 +61,7 @@ router.delete("/books/:id",async(req,res)=>{
     
     const book = await books.findByIdAndDelete(_id);
     
-    res.send(book);
+    res.send(ibooks);
 
   });
 
