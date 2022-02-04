@@ -56,16 +56,9 @@ router.patch('/books/:id', async(req,res) => {
 })
 
 router.delete("/books/:id",async(req,res)=>{
-    
     const _id = req.params.id;
-    
-    const book = await books.findByIdAndDelete(_id);
-    
-    res.send(ibooks);
-
+    const DATA = await books.findByIdAndDelete(_id);
+    res.send(DATA);
   });
-
-
-
 
 module.exports = router
