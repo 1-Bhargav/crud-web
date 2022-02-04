@@ -1,4 +1,5 @@
 var express = require('express');
+const books = require('./Models/books');
 var router = express.Router();
 var book = require('./Models/books')
 
@@ -58,9 +59,9 @@ router.delete("/books/:id",async(req,res)=>{
     
     const _id = req.params.id;
     
-    const book = await Song.findByIdAndDelete(_id);
+    const book = await books.findByIdAndDelete(_id);
     
-    res.send(ibook);
+    res.send(book);
 
   });
 
